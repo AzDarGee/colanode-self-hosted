@@ -17,7 +17,7 @@ services:
       - '5445:5432'
     hostname: colanode_postgres
     extra_hosts:
-      - "colanode_postgres:10.0.15.6"
+      - "colanode_postgres:10.0.15.3"
 
   valkey:
     image: valkey/valkey:8.1
