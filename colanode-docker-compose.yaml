@@ -14,10 +14,7 @@ services:
     networks:
       - colanode_network
     ports:
-      - '5445:5432'
-    hostname: colanode_postgres
-    extra_hosts:
-      - "colanode_postgres:10.0.15.3"
+      - '5432:5432'
 
   valkey:
     image: valkey/valkey:8.1
@@ -140,7 +137,7 @@ services:
       # PostgreSQL Configuration
       # ───────────────────────────────────────────────────────────────
       # The server expects a PostgreSQL database with the pgvector extension installed.
-      POSTGRES_URL: 'postgres://colanode_user:postgrespass123@postgres:5445/colanode_db'
+      POSTGRES_URL: 'postgres://colanode_user:postgrespass123@postgres:5432/colanode_db'
 
       # Optional variables for SSL connection to the database
       # POSTGRES_SSL_REJECT_UNAUTHORIZED: 'false'
